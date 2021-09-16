@@ -16,8 +16,13 @@ public class BankAccount {
         return true;
     }
 
-    public double checkBalance(){
-        return 0;
+    public double checkBalance() {
+        return balance;
+    }
+
+    public double addInterest(){
+        balance += interestRate * balance;
+        return balance;
     }
 
 
