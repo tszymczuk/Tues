@@ -10,6 +10,20 @@ public class Customer {
     public Customer(String customerName, int taxID) {
         customerID = taxID;
         name = customerName;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getID() {
+        return customerID;
+    }
+
+    public boolean openAccount(double initialDeposit) {
+        var newAccount = new BankAccount();
+        newAccount.deposit(initialDeposit);
+        var didSucceed = accounts.add(newAccount);
+        return didSucceed;
     }
 }
