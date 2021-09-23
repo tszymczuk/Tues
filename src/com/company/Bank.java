@@ -7,18 +7,18 @@ public class Bank {
     private ArrayList<BankAccount> allAccounts;
     private ArrayList<Customer> allCustomers;
 
-    public Bank(){
+    public Bank() {
         allAccounts = new ArrayList<BankAccount>();
         allCustomers = new ArrayList<Customer>();
     }
 
 
-    public void doBanking(){
+    public void doBanking() {
         var menuReader = new Scanner(System.in);
-        while(true){
+        while (true) {
             printMenu();
             var userChoice = menuReader.nextInt();
-            switch (userChoice){
+            switch (userChoice) {
                 case 1:
                     System.exit(0);
                 case 2:
@@ -34,9 +34,9 @@ public class Bank {
     }
 
     private Customer selectCustomer(Scanner reader) {
-
+        System.out.print("What is the Customer's ID?: ");
+        var idToFind = reader.nextInt();
     }
-
 
     private void addCustomer(Scanner inputReader) {
         inputReader.nextLine(); //Eat the orphan newLine from previous nextInt call
@@ -46,8 +46,6 @@ public class Bank {
         var taxID = inputReader.nextInt();
         var newCustomer = new Customer(customerName, taxID);
         allCustomers.add(newCustomer);
-    }
-
     }
 
     private void printMenu() {
