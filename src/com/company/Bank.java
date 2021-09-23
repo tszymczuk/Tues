@@ -36,6 +36,7 @@ public class Bank {
     private Customer selectCustomer(Scanner reader) {
         System.out.print("What is the Customer's ID?: ");
         var idToFind = reader.nextInt();
+        return null;
     }
 
     private void addCustomer(Scanner inputReader) {
